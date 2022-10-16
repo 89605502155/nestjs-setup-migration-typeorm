@@ -7,12 +7,12 @@ config();
 const configService = new ConfigService();
 
 export const AppDataSource = new DataSource({
-  type: 'mssql',
+  type: 'postgres',
   host: configService.get('DB_HOST'),
   port: +configService.get('DB_PORT'),
-  username: configService.get('DB_USERNAME'),
-  password: configService.get('DB_PASSWORD'),
-  database: configService.get('DB_NAME'),
+  username: 'sa',
+  password: 'Onepay0!',
+  database: 'onepay_db',
   synchronize: configService.get('DB_SYNC') === 'true' ? true : false,
   cache: true,
   entities: ['dist/**/*.entity{.ts,.js}'],
