@@ -1,6 +1,7 @@
 ## Command run migration
 
 ```bash
+$ docker-compose up
 $ npm run migration:create --name=SeedUserData
 ```
 <p>* Note when migration:generate must be delete or drop database (first time generate)</p>
@@ -36,7 +37,7 @@ $ npm run migration:create --name=SeedUserData
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. You need to install docker in your PC.
 
 ## Installation
 
@@ -48,12 +49,15 @@ $ npm install
 
 ```bash
 # development
+$ docker-compose up
 $ npm run start
 
 # watch mode
+$ docker-compose up -d
 $ npm run start:dev
 
 # production mode
+$ docker-compose up
 $ npm run start:prod
 ```
 
